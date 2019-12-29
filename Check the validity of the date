@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int a,b,c,d;
+	cin >> a >> b>> c;
+	if (b <= 0 || b > 12||c<1)
+		cout << "no";
+	else if (b != 2)
+		switch (b)
+		{
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:d=31; break;
+		case 4:
+		case 6:
+		case 9:
+		case 11:d=30;
+		}
+	else if (a % 4 != 0)
+		d=28;
+	else if(a%100!=0)
+		d=29;
+	else if (a % 400 != 0)
+		d=28;
+	else
+		d=29;
+	if(c>d)
+		cout <<"no";
+	else cout <<"yes";
+	return 0;
+	
+}
